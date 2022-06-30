@@ -8,7 +8,7 @@ kaggle:
 
 data_source:
   Billboard: data/external/Billboard_hot_100
-  RIAA: data/external/RIAA
+  RIAA: data\external\RIAA
 
 load_data:
   raw_billboard_csv: data/raw/billboard_hot_100.csv
