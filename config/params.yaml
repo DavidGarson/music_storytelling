@@ -11,6 +11,7 @@ data_source:
   RIAA: data\external\RIAA
   AMT_V1: data/external/AMT_V1
   AMT_V2: data/external/AMT_V2
+  exclud_AMT: data/raw
 
 load_data:
   raw_billboard_csv: data/raw/billboard_hot_100.csv

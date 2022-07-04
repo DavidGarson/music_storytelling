@@ -4,3 +4,4 @@ pandas
 kaggle
 numpy
 pyyaml
+openpyxl
