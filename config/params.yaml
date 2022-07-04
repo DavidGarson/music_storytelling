@@ -9,10 +9,14 @@ kaggle:
 data_source:
   Billboard: data/external/Billboard_hot_100
   RIAA: data\external\RIAA
+  AMT_V1: data/external/AMT_V1
+  AMT_V2: data/external/AMT_V2
 
 load_data:
   raw_billboard_csv: data/raw/billboard_hot_100.csv
   raw_riaa_csv: data/raw/riaa.csv
+  exclud_AMT: data/raw/exclud_AMT.txt
+
 
 processed_data:
   processed_billboard_csv: data/processed/billboard_hot_100.csv
