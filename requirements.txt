@@ -3,5 +3,4 @@ dvc[gdrive]
 pandas
 kaggle
 numpy
-yaml
-openpyxl
+pyyaml
