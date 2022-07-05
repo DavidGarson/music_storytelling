@@ -18,34 +18,23 @@ def open_exclud_AMT_file(path_file):
     
     return df_ID_AMT_EXCLU
 
-def open_AMT_V2_answer(path_file):
-    try:
-        for file in os.listdir(path_file):
-            if file.endswith('xlsx'):
-                wkspFldr = os.path.abspath(path_file)
-                print(wkspFldr)
-                df_AMT = pd.read_excel(os.path.join(wkspFldr, file), sheet_name=0, engine="openpyxl")
-                # print(type(df_AMT))
-                return df_AMT
-    except:
-        print("No AMT_V2 file")
-
 def create_exclusion_file(config_path):
     config = read_params(config_path)
-    AMT_V2_dataset = config['data_source']['AMT_V2']
-    save_path = config['load_data']['exclud_AMT']
+    # AMT_V2_dataset = config['data_source']['AMT_V2']
+    AMT_V2_dataset = config['load_data']['raw_AMT_v2_json']
+    save_path = config['load_data']['exclud_AMT_txt']
     list_already_excluded = open_exclud_AMT_file(save_path)
-    print(list_already_excluded)
     # df_AMT_V2 = open_AMT_V2_answer(AMT_V2_dataset)
-    # full_exclud = df_AMT_V2['MID'].unique()
-    # full_exclud = full_exclud.tolist()
+    df_AMT_V2 = pd.read_json(AMT_V2_dataset)
+    full_exclud = df_AMT_V2['MID'].unique()
+    full_exclud = full_exclud.tolist()
 
-    # full_exclud.extend(list_already_excluded['index'].tolist())
-    # result = [s.strip() for s in full_exclud]
-    # result = list(set(result))
-    # print(len(result))
-    # with open(save_path, 'w') as f:
-    #     f.writelines(", ".join(str(x) for x in result))
+    full_exclud.extend(list_already_excluded['index'].tolist())
+    result = [s.strip() for s in full_exclud]
+    result = list(set(result))
+    print(len(result))
+    with open(save_path, 'w') as f:
+        f.writelines(", ".join(str(x) for x in result))
 
 
 if __name__=="__main__":
