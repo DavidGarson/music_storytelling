@@ -7,7 +7,7 @@ def create_riaa_raw_dataset(config_path):
     config = read_params(config_path = config_path)
     dir_name = config['data_source']['RIAA']
     df_list = []
-    df_riaa = pd.DataFrame()
+    # df_riaa = pd.DataFrame()
     
     for file in os.listdir(dir_name):
         if file.endswith('csv'):
