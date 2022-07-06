@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import os
 import argparse
-from utils import read_params, merge
+from utils import read_params
 
 def table_score_creation(df, score):
     # print(df)
@@ -62,8 +62,8 @@ def processed_AMT_V2(config_path):
 
     df_processed_AMT_V2_hiphop = table_score_creation(whole_dataframes["hiphop"], Q_for_score)
     df_processed_AMT_V2_pop = table_score_creation(whole_dataframes["pop"], Q_for_score)
-    df_processed_AMT_V2_hiphop.to_csv(path_processed_AMT_V2_hiphop)
-    df_processed_AMT_V2_pop.to_csv(path_processed_AMT_V2_pop)
+    df_processed_AMT_V2_hiphop.to_csv(path_processed_AMT_V2_hiphop, index=False)
+    df_processed_AMT_V2_pop.to_csv(path_processed_AMT_V2_pop, index=False)
 
 
 if __name__=="__main__":

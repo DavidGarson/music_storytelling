@@ -5,3 +5,5 @@ kaggle
 numpy
 pyyaml
 openpyxl
+sklearn
+python-docx
