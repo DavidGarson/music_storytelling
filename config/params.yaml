@@ -1,6 +1,6 @@
 base:
   project: Music-Storytelling-Project
-  random_state: 42
+  random_state: 50
   target_col: Storytelling
 
 kaggle:
