@@ -3,8 +3,19 @@ base:
   random_state: 50
   target_col: Storytelling
 
+study:
+  begin_year: 2007
+  end_year: 2021
+  music_genres:
+    genre_1: 'Hip Hop'
+    genre_2: 'Pop'
+  country: 'US'
+
 kaggle:
   dataset : 'dhruvildave/billboard-the-hot-100-songs'
+
+discogs:
+  token: data/credential/discogs.json
 
 data_source:
   Billboard: data/external/Billboard_hot_100
@@ -12,6 +23,7 @@ data_source:
   AMT_V1: data/external/AMT_V1
   AMT_V2: data/external/AMT_V2
   exclud_AMT: data/raw
+  Discogs: data/external/discogs
 
 load_data:
   raw_billboard_csv: data/raw/billboard_hot_100.csv

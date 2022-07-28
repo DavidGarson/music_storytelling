@@ -7,3 +7,5 @@ pyyaml
 openpyxl
 sklearn
 python-docx
+python3-discogs-client
+tqdm
