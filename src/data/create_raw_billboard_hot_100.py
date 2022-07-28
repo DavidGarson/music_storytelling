@@ -18,9 +18,9 @@ def open_billboard(path_file):
 def create_raw_billboard(config_path):
     config = read_params(config_path = config_path)
     dir_name = config['data_source']['Billboard']
-    df_AMT_v2 = open_billboard(dir_name
+    df_AMT_v2 = open_billboard(dir_name)
     raw_AMT_v2_path = config['load_data']['raw_billboard_csv']
-    df_AMT_v2.to_json(raw_AMT_v2_path)
+    df_AMT_v2.to_csv(raw_AMT_v2_path)
 
 if __name__=="__main__":
     args = argparse.ArgumentParser()
