@@ -9,9 +9,8 @@ def open_billboard(path_file):
             if file.endswith('csv'):
                 wkspFldr = os.path.abspath(path_file)
                 print(wkspFldr)
-                df_AMT = pd.read_csv(os.path.join(wkspFldr, file), sep=",")
-                # print(type(df_AMT))
-                return df_AMT
+                df = pd.read_csv(os.path.join(wkspFldr, file), sep=",")
+                return df
     except:
         print("No billboard file")
 
@@ -19,7 +18,7 @@ def open_billboard(path_file):
 def create_raw_billboard(config_path):
     config = read_params(config_path = config_path)
     dir_name = config['data_source']['Billboard']
-    df_AMT_v2 = open_billboard(dir_name)
+    df_AMT_v2 = open_billboard(dir_name
     raw_AMT_v2_path = config['load_data']['raw_billboard_csv']
     df_AMT_v2.to_json(raw_AMT_v2_path)
 
