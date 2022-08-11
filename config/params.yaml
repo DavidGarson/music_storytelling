@@ -6,6 +6,8 @@ base:
 study:
   begin_year: 2007
   end_year: 2021
+  certification: 'gold'
+  min_year_to_get_certification: 2 #after release
   music_genres:
     genre_1: 'Hip Hop'
     genre_2: 'Pop'
@@ -19,7 +21,7 @@ discogs:
 
 data_source:
   Billboard: data/external/Billboard_hot_100
-  RIAA: data\external\RIAA
+  RIAA: data/external/RIAA
   AMT_V1: data/external/AMT_V1
   AMT_V2: data/external/AMT_V2
   exclud_AMT: data/raw
